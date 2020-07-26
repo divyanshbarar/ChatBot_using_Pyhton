@@ -21,6 +21,8 @@ def send(event=None):
         txt.insert(END,"\n"+"ROCKY = >" + pyjokes.get_joke())    
     elif(e.get()=="tell me the time" or e.get()=="tell me the date" or e.get()=="what time it is" or e.get()=="time"):
         txt.insert(END,"\n"+"ROCKY = >" + time.asctime())  
+    elif(e.get()=="bye"):
+        root.destroy()
     elif(len(e.get())==0):
         txt.insert(END,"\n"+"ROCKY = >Type Something before hitting ENTER ")
     else:
